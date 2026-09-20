@@ -1,6 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
+import puccini01 from "./assets/puccini-01.jpg";
+import puccini02 from "./assets/puccini-02.jpg";
+import puccini03 from "./assets/puccini-03.jpg";
+import puccini04 from "./assets/puccini-04.jpg";
+import puccini05 from "./assets/puccini-05.jpg";
+import puccini06 from "./assets/puccini-06.jpg";
+import puccini07 from "./assets/puccini-07.jpg";
+import puccini08 from "./assets/puccini-08.jpg";
+import puccini09 from "./assets/puccini-09.jpg";
+import puccini10 from "./assets/puccini-10.jpg";
+import puccini11 from "./assets/puccini-11.jpg";
+import puccini12 from "./assets/puccini-12.jpg";
+import puccini13 from "./assets/puccini-13.jpg";
+import puccini14 from "./assets/puccini-14.jpg";
+import puccini15 from "./assets/puccini-15.jpg";
+import puccini16 from "./assets/puccini-16.jpg";
+import puccini17 from "./assets/puccini-17.jpg";
+import puccini18 from "./assets/puccini-18.jpg";
 
 const PHONE = '+441912321961';
 const DISPLAY_PHONE = '+44 191 232 1961';
@@ -9,18 +27,18 @@ const DIRECTIONS = 'https://www.google.com/maps/search/?api=1&query=Puccini%20Re
 const FACEBOOK = 'https://www.facebook.com/profile.php?id=100057132443573';
 
 const photos = [
-  { src: '/src/assets/puccini-02.jpg', title: 'Signature pizza', tag: 'Pizza' },
-  { src: '/src/assets/puccini-20.jpg', title: 'Restaurant entrance', tag: 'Restaurant' },
-  { src: '/src/assets/puccini-06.jpg', title: 'Seafood selection', tag: 'Seafood' },
-  { src: '/src/assets/puccini-12.jpg', title: 'Fresh pasta', tag: 'Pasta' },
-  { src: '/src/assets/puccini-04.jpg', title: 'Italian dining', tag: 'Dining' },
-  { src: '/src/assets/puccini-07.jpg', title: 'Warm interior', tag: 'Interior' },
-  { src: '/src/assets/puccini-09.jpg', title: 'Grill dish', tag: 'Grill' },
-  { src: '/src/assets/puccini-03.jpg', title: 'Seafood & sides', tag: 'Seafood' },
-  { src: '/src/assets/puccini-05.jpg', title: 'Pizza & pasta', tag: 'Italian' },
-  { src: '/src/assets/puccini-08.jpg', title: 'Dining room', tag: 'Interior' },
-  { src: '/src/assets/puccini-10.jpg', title: 'Antipasti', tag: 'Starters' },
-  { src: '/src/assets/puccini-14.jpg', title: 'Restaurant atmosphere', tag: 'Atmosphere' },
+  { src: puccini02, title: "Signature pizza", tag: "Pizza" },
+  { src: puccini15, title: "Restaurant entrance", tag: "Restaurant" },
+  { src: puccini06, title: "Seafood selection", tag: "Seafood" },
+  { src: puccini12, title: "Fresh pasta", tag: "Pasta" },
+  { src: puccini04, title: "Italian dining", tag: "Dining" },
+  { src: puccini07, title: "Warm interior", tag: "Interior" },
+  { src: puccini09, title: "Grill dish", tag: "Grill" },
+  { src: puccini03, title: "Seafood & sides", tag: "Seafood" },
+  { src: puccini05, title: "Pizza & pasta", tag: "Italian" },
+  { src: puccini08, title: "Dining room", tag: "Interior" },
+  { src: puccini10, title: "Antipasti", tag: "Starters" },
+  { src: puccini14, title: "Restaurant atmosphere", tag: "Atmosphere" },
 ];
 
 const menu = {
