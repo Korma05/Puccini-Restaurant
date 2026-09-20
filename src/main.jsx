@@ -162,18 +162,46 @@ function App() {
   return (
     <>
       <header className="site-header">
-        <a href="#home" className="brand" onClick={closeNav} aria-label="Puccini Restaurant home">
+        <a
+          href="#home"
+          className="brand"
+          onClick={closeNav}
+          aria-label="Puccini Restaurant home"
+        >
           <span className="brand-mark">P</span>
-          <span><strong>PUCCINI</strong><small>PIZZERIA & STEAKHOUSE</small></span>
+          <span>
+            <strong>PUCCINI</strong>
+            <small>PIZZERIA & STEAKHOUSE</small>
+          </span>
         </a>
-        <nav className={openNav ? 'nav open' : 'nav'} aria-label="Main navigation">
-          {['Home','About','Menu','Gallery','Services','Location','Contact'].map(item => (
-            <a key={item} href={`#${item.toLowerCase()}`} onClick={closeNav}>{item}</a>
+        <nav
+          className={openNav ? "nav open" : "nav"}
+          aria-label="Main navigation"
+        >
+          {[
+            "Home",
+            "About",
+            "Menu",
+            "Gallery",
+            "Services",
+            "Location",
+            "Contact",
+          ].map((item) => (
+            <a key={item} href={`#${item.toLowerCase()}`} onClick={closeNav}>
+              {item}
+            </a>
           ))}
-          <a className="nav-cta" href="#menu" onClick={closeNav}>View Menu <Icon name="arrow" /></a>
+          <a className="nav-cta" href="#menu" onClick={closeNav}>
+            View Menu <Icon name="arrow" />
+          </a>
         </nav>
-        <button className="menu-toggle" aria-label={openNav ? 'Close navigation' : 'Open navigation'} aria-expanded={openNav} onClick={() => setOpenNav(v => !v)}>
-          <Icon name={openNav ? 'x' : 'menu'} />
+        <button
+          className="menu-toggle"
+          aria-label={openNav ? "Close navigation" : "Open navigation"}
+          aria-expanded={openNav}
+          onClick={() => setOpenNav((v) => !v)}
+        >
+          <Icon name={openNav ? "x" : "menu"} />
         </button>
       </header>
 
@@ -182,102 +210,455 @@ function App() {
           <div className="hero-image" aria-hidden="true" />
           <div className="hero-overlay" />
           <div className="hero-content container">
-            <div className="eyebrow"><span /> Newcastle upon Tyne <span /></div>
-            <h1>Italian food,<br /><em>made to linger over.</em></h1>
-            <p>Traditional pizza, pasta, seafood and grill dishes in the heart of Newcastle upon Tyne.</p>
-            <div className="hero-actions">
-              <a className="btn btn-primary" href="#menu">Explore the menu <Icon name="arrow" /></a>
-              <a className="btn btn-ghost" href={`tel:${PHONE}`}>Call Puccini <Icon name="phone" /></a>
+            <div className="eyebrow">
+              <span /> Newcastle upon Tyne <span />
             </div>
-            <div className="hero-note"><span className="status-dot" /> Currently open · closes 10:00 PM</div>
+            <h1>
+              Italian food,
+              <br />
+              <em>made to linger over.</em>
+            </h1>
+            <p>
+              Traditional pizza, pasta, seafood and grill dishes in the heart of
+              Newcastle upon Tyne.
+            </p>
+            <div className="hero-actions">
+              <a className="btn btn-primary" href="#menu">
+                Explore the menu <Icon name="arrow" />
+              </a>
+              <a className="btn btn-ghost" href={`tel:${PHONE}`}>
+                Call Puccini <Icon name="phone" />
+              </a>
+            </div>
+            <div className="hero-note">
+              <span className="status-dot" /> Currently open · closes 10:00 PM
+            </div>
           </div>
-          <a className="scroll-cue" href="#about" aria-label="Scroll to about"><span /> Scroll</a>
+          <a className="scroll-cue" href="#about" aria-label="Scroll to about">
+            <span /> Scroll
+          </a>
         </section>
 
         <section className="intro-strip">
           <div className="container intro-grid">
-            <div><span className="strip-kicker">Puccini Restaurant</span><strong>Informal Italian dining, <em>right in the city.</em></strong></div>
-            <p>From classic pizza and pasta to seafood and grill dishes, the menu brings familiar Italian favourites together in a relaxed Newcastle setting.</p>
+            <div>
+              <span className="strip-kicker">Puccini Restaurant</span>
+              <strong>
+                Informal Italian dining, <em>right in the city.</em>
+              </strong>
+            </div>
+            <p>
+              From classic pizza and pasta to seafood and grill dishes, the menu
+              brings familiar Italian favourites together in a relaxed Newcastle
+              setting.
+            </p>
           </div>
         </section>
 
         <section id="about" className="section about-section">
           <div className="container about-grid">
             <div className="about-collage">
-              <img className="about-main" src="/src/assets/puccini-20.jpg" alt="Puccini Restaurant entrance on Pudding Chare" loading="lazy" />
-              <img className="about-small" src="/src/assets/puccini-07.jpg" alt="Warmly lit Puccini dining room" loading="lazy" />
-              <div className="stamp"><span>Est.</span><strong>PUCCINI</strong><small>NEWCASTLE</small></div>
+              <img
+                className="about-main"
+src={puccini15}                alt="Puccini Restaurant entrance on Pudding Chare"
+                loading="lazy"
+              />
+              <img
+                className="about-small"
+                src={puccini07}
+                alt="Warmly lit Puccini dining room"
+                loading="lazy"
+              />
+              <div className="stamp">
+                <span>Est.</span>
+                <strong>PUCCINI</strong>
+                <small>NEWCASTLE</small>
+              </div>
             </div>
             <div className="about-copy">
               <p className="section-label">The restaurant</p>
-              <h2>A little taste of <em>Italy</em> in the heart of Newcastle.</h2>
-              <p>Puccini is an informal Italian restaurant serving traditional pizza and pasta, alongside seafood and grill dishes. Whether you are joining us for a relaxed meal or picking up something to enjoy elsewhere, the menu is built around approachable Italian favourites.</p>
-              <div className="signature-rule"><span>PUCCINI</span></div>
-              <div className="facts"><div><b>01</b><span>Traditional<br />Italian dishes</span></div><div><b>02</b><span>Pizza, pasta,<br />seafood & grill</span></div><div><b>03</b><span>Dine-in,<br />takeaway & delivery</span></div></div>
+              <h2>
+                A little taste of <em>Italy</em> in the heart of Newcastle.
+              </h2>
+              <p>
+                Puccini is an informal Italian restaurant serving traditional
+                pizza and pasta, alongside seafood and grill dishes. Whether you
+                are joining us for a relaxed meal or picking up something to
+                enjoy elsewhere, the menu is built around approachable Italian
+                favourites.
+              </p>
+              <div className="signature-rule">
+                <span>PUCCINI</span>
+              </div>
+              <div className="facts">
+                <div>
+                  <b>01</b>
+                  <span>
+                    Traditional
+                    <br />
+                    Italian dishes
+                  </span>
+                </div>
+                <div>
+                  <b>02</b>
+                  <span>
+                    Pizza, pasta,
+                    <br />
+                    seafood & grill
+                  </span>
+                </div>
+                <div>
+                  <b>03</b>
+                  <span>
+                    Dine-in,
+                    <br />
+                    takeaway & delivery
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="menu" className="section menu-section">
           <div className="container">
-            <div className="section-heading centered"><p className="section-label">From the kitchen</p><h2>The Puccini <em>menu</em></h2><p>Browse the current menu below. All dishes are served as described on the restaurant menu; please check with staff regarding allergens.</p></div>
-            <div className="menu-tabs" role="tablist" aria-label="Menu categories">
-              {Object.keys(menu).map(cat => <button key={cat} className={menuCategory === cat ? 'active' : ''} onClick={() => setMenuCategory(cat)} role="tab" aria-selected={menuCategory === cat}>{cat}</button>)}
+            <div className="section-heading centered">
+              <p className="section-label">From the kitchen</p>
+              <h2>
+                The Puccini <em>menu</em>
+              </h2>
+              <p>
+                Browse the current menu below. All dishes are served as
+                described on the restaurant menu; please check with staff
+                regarding allergens.
+              </p>
+            </div>
+            <div
+              className="menu-tabs"
+              role="tablist"
+              aria-label="Menu categories"
+            >
+              {Object.keys(menu).map((cat) => (
+                <button
+                  key={cat}
+                  className={menuCategory === cat ? "active" : ""}
+                  onClick={() => setMenuCategory(cat)}
+                  role="tab"
+                  aria-selected={menuCategory === cat}
+                >
+                  {cat}
+                </button>
+              ))}
             </div>
             <div className="menu-panel">
-              <div className="menu-panel-head"><span>{menuCategory}</span><small>{menuCategory === 'Pizza' ? 'All pizzas based on mozzarella cheese, tomato sauce & oregano' : menuCategory === 'Pasta' ? 'Choice of spaghetti, penne or tagliatelle' : 'Selected from the current printed menu'}</small></div>
-              <div className="menu-list">
-                {menu[menuCategory].map(([name, desc, price]) => <article className="dish" key={`${menuCategory}-${name}`}><div className="dish-main"><h3>{name}</h3>{desc && <p>{desc}</p>}</div><span className="dish-line" /><strong>{price}</strong></article>)}
+              <div className="menu-panel-head">
+                <span>{menuCategory}</span>
+                <small>
+                  {menuCategory === "Pizza"
+                    ? "All pizzas based on mozzarella cheese, tomato sauce & oregano"
+                    : menuCategory === "Pasta"
+                      ? "Choice of spaghetti, penne or tagliatelle"
+                      : "Selected from the current printed menu"}
+                </small>
               </div>
-              <div className="menu-notes"><span>Gluten-free pasta +£1</span><span>Gluten-free pizza base +£2</span><span>Allergens: please check with staff before ordering</span></div>
+              <div className="menu-list">
+                {menu[menuCategory].map(([name, desc, price]) => (
+                  <article className="dish" key={`${menuCategory}-${name}`}>
+                    <div className="dish-main">
+                      <h3>{name}</h3>
+                      {desc && <p>{desc}</p>}
+                    </div>
+                    <span className="dish-line" />
+                    <strong>{price}</strong>
+                  </article>
+                ))}
+              </div>
+              <div className="menu-notes">
+                <span>Gluten-free pasta +£1</span>
+                <span>Gluten-free pizza base +£2</span>
+                <span>Allergens: please check with staff before ordering</span>
+              </div>
             </div>
-            <div className="menu-download"><a href="/Puccini-Food-Menu.pdf" target="_blank" rel="noreferrer">View the full printed menu <Icon name="external" /></a></div>
+            <div className="menu-download">
+              <a href="/Puccini-Food-Menu.pdf" target="_blank" rel="noreferrer">
+                View the full printed menu <Icon name="external" />
+              </a>
+            </div>
           </div>
         </section>
 
         <section id="services" className="section services-section">
           <div className="container">
-            <div className="section-heading"><p className="section-label">Ways to enjoy Puccini</p><h2>However you dine, <em>come hungry.</em></h2></div>
+            <div className="section-heading">
+              <p className="section-label">Ways to enjoy Puccini</p>
+              <h2>
+                However you dine, <em>come hungry.</em>
+              </h2>
+            </div>
             <div className="services-grid">
-              <article><span className="service-number">01</span><h3>Dine in</h3><p>Settle into the restaurant and enjoy pizza, pasta, seafood and grill dishes in a warm, relaxed setting.</p><a href="#location">Find us <Icon name="arrow" /></a></article>
-              <article><span className="service-number">02</span><h3>Takeaway</h3><p>Enjoy your Puccini favourites away from the restaurant. Call the team for current takeaway information.</p><a href={`tel:${PHONE}`}>Call us <Icon name="phone" /></a></article>
-              <article><span className="service-number">03</span><h3>Delivery</h3><p>Delivery is available. Contact Puccini directly for current delivery information and availability.</p><a href={`tel:${PHONE}`}>Call us <Icon name="phone" /></a></article>
+              <article>
+                <span className="service-number">01</span>
+                <h3>Dine in</h3>
+                <p>
+                  Settle into the restaurant and enjoy pizza, pasta, seafood and
+                  grill dishes in a warm, relaxed setting.
+                </p>
+                <a href="#location">
+                  Find us <Icon name="arrow" />
+                </a>
+              </article>
+              <article>
+                <span className="service-number">02</span>
+                <h3>Takeaway</h3>
+                <p>
+                  Enjoy your Puccini favourites away from the restaurant. Call
+                  the team for current takeaway information.
+                </p>
+                <a href={`tel:${PHONE}`}>
+                  Call us <Icon name="phone" />
+                </a>
+              </article>
+              <article>
+                <span className="service-number">03</span>
+                <h3>Delivery</h3>
+                <p>
+                  Delivery is available. Contact Puccini directly for current
+                  delivery information and availability.
+                </p>
+                <a href={`tel:${PHONE}`}>
+                  Call us <Icon name="phone" />
+                </a>
+              </article>
             </div>
           </div>
         </section>
 
         <section id="gallery" className="section gallery-section">
           <div className="container">
-            <div className="section-heading centered"><p className="section-label">A glimpse inside</p><h2>Food, atmosphere & <em>the Puccini table.</em></h2></div>
+            <div className="section-heading centered">
+              <p className="section-label">A glimpse inside</p>
+              <h2>
+                Food, atmosphere & <em>the Puccini table.</em>
+              </h2>
+            </div>
             <div className="gallery-grid">
-              {photos.map((p, i) => <button className={`gallery-item gallery-${i + 1}`} key={p.src} onClick={() => setLightbox(p)} aria-label={`Open ${p.title}`}><img src={p.src} alt={p.title} loading="lazy" /><span><small>{p.tag}</small>{p.title}</span></button>)}
+              {photos.map((p, i) => (
+                <button
+                  className={`gallery-item gallery-${i + 1}`}
+                  key={p.src}
+                  onClick={() => setLightbox(p)}
+                  aria-label={`Open ${p.title}`}
+                >
+                  <img src={p.src} alt={p.title} loading="lazy" />
+                  <span>
+                    <small>{p.tag}</small>
+                    {p.title}
+                  </span>
+                </button>
+              ))}
             </div>
           </div>
         </section>
 
         <section className="offer-band">
           <div className="container offer-grid">
-            <div><p className="section-label">From the current menu</p><h2>Three courses.<br /><em>£9.</em></h2></div>
-            <div><p><strong>Daily Lunch Special</strong><br />Served Tue–Fri, 12:00–6:00pm. Starter, any pasta or pizza, and dessert.</p><small>See the full menu for exclusions and details.</small></div>
-            <a className="btn btn-light" href="#menu">See menu <Icon name="arrow" /></a>
+            <div>
+              <p className="section-label">From the current menu</p>
+              <h2>
+                Three courses.
+                <br />
+                <em>£9.</em>
+              </h2>
+            </div>
+            <div>
+              <p>
+                <strong>Daily Lunch Special</strong>
+                <br />
+                Served Tue–Fri, 12:00–6:00pm. Starter, any pasta or pizza, and
+                dessert.
+              </p>
+              <small>See the full menu for exclusions and details.</small>
+            </div>
+            <a className="btn btn-light" href="#menu">
+              See menu <Icon name="arrow" />
+            </a>
           </div>
         </section>
 
         <section id="location" className="section location-section">
           <div className="container location-grid">
-            <div className="map-card"><div className="map-art"><div className="map-road r1"/><div className="map-road r2"/><div className="map-road r3"/><div className="map-block b1"/><div className="map-block b2"/><div className="map-block b3"/><div className="map-pin"><Icon name="pin" /></div></div><a className="map-link" href={DIRECTIONS} target="_blank" rel="noreferrer">Open in Google Maps <Icon name="external" /></a></div>
-            <div className="location-copy"><p className="section-label">Find Puccini</p><h2>Right in the heart of <em>Newcastle.</em></h2><p className="address">29 Pudding Chare<br />Newcastle upon Tyne<br />NE1 1UF<br />United Kingdom</p><div className="contact-row"><div><Icon name="phone" /><span>Call us<strong><a href={`tel:${PHONE}`}>{DISPLAY_PHONE}</a></strong></span></div><div><Icon name="clock" /><span>Current status<strong>Open · closes 10:00 PM</strong></span></div></div><div className="location-actions"><a className="btn btn-dark" href={DIRECTIONS} target="_blank" rel="noreferrer">Get directions <Icon name="arrow" /></a><a className="btn btn-outline" href={`tel:${PHONE}`}>Call Puccini <Icon name="phone" /></a></div><p className="plus-code">Plus Code <strong>X9CP+98 Newcastle upon Tyne</strong></p></div>
+            <div className="map-card">
+              <div className="map-art">
+                <div className="map-road r1" />
+                <div className="map-road r2" />
+                <div className="map-road r3" />
+                <div className="map-block b1" />
+                <div className="map-block b2" />
+                <div className="map-block b3" />
+                <div className="map-pin">
+                  <Icon name="pin" />
+                </div>
+              </div>
+              <a
+                className="map-link"
+                href={DIRECTIONS}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open in Google Maps <Icon name="external" />
+              </a>
+            </div>
+            <div className="location-copy">
+              <p className="section-label">Find Puccini</p>
+              <h2>
+                Right in the heart of <em>Newcastle.</em>
+              </h2>
+              <p className="address">
+                29 Pudding Chare
+                <br />
+                Newcastle upon Tyne
+                <br />
+                NE1 1UF
+                <br />
+                United Kingdom
+              </p>
+              <div className="contact-row">
+                <div>
+                  <Icon name="phone" />
+                  <span>
+                    Call us
+                    <strong>
+                      <a href={`tel:${PHONE}`}>{DISPLAY_PHONE}</a>
+                    </strong>
+                  </span>
+                </div>
+                <div>
+                  <Icon name="clock" />
+                  <span>
+                    Current status<strong>Open · closes 10:00 PM</strong>
+                  </span>
+                </div>
+              </div>
+              <div className="location-actions">
+                <a
+                  className="btn btn-dark"
+                  href={DIRECTIONS}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Get directions <Icon name="arrow" />
+                </a>
+                <a className="btn btn-outline" href={`tel:${PHONE}`}>
+                  Call Puccini <Icon name="phone" />
+                </a>
+              </div>
+              <p className="plus-code">
+                Plus Code <strong>X9CP+98 Newcastle upon Tyne</strong>
+              </p>
+            </div>
           </div>
         </section>
 
         <section id="contact" className="contact-section">
-          <div className="container contact-inner"><div><p className="section-label">Come and see us</p><h2>Make it a <em>Puccini</em> evening.</h2></div><div className="contact-actions"><a className="btn btn-primary" href={`tel:${PHONE}`}>Call {DISPLAY_PHONE} <Icon name="phone" /></a><a className="social" href={FACEBOOK} target="_blank" rel="noreferrer" aria-label="Puccini on Facebook"><Icon name="facebook" /></a></div></div>
+          <div className="container contact-inner">
+            <div>
+              <p className="section-label">Come and see us</p>
+              <h2>
+                Make it a <em>Puccini</em> evening.
+              </h2>
+            </div>
+            <div className="contact-actions">
+              <a className="btn btn-primary" href={`tel:${PHONE}`}>
+                Call {DISPLAY_PHONE} <Icon name="phone" />
+              </a>
+              <a
+                className="social"
+                href={FACEBOOK}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Puccini on Facebook"
+              >
+                <Icon name="facebook" />
+              </a>
+            </div>
+          </div>
         </section>
       </main>
 
-      <footer className="footer"><div className="container footer-grid"><div className="footer-brand"><div className="brand"><span className="brand-mark">P</span><span><strong>PUCCINI</strong><small>PIZZERIA & STEAKHOUSE</small></span></div><p>Traditional Italian pizza, pasta, seafood and grill dishes in Newcastle upon Tyne.</p></div><div><h3>Explore</h3><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#services">Services</a></div><div><h3>Visit</h3><a href="#location">29 Pudding Chare</a><a href="#location">Newcastle upon Tyne</a><a href="#location">NE1 1UF</a><a href={`tel:${PHONE}`}>{DISPLAY_PHONE}</a></div><div><h3>Menu</h3><a href="/Puccini-Food-Menu.pdf" target="_blank" rel="noreferrer">View full menu</a><a href="#services">Dine-in</a><a href="#services">Takeaway</a><a href="#services">Delivery</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Puccini Restaurant. All rights reserved.</span><span>Newcastle upon Tyne · NE1</span></div></footer>
+      <footer className="footer">
+        <div className="container footer-grid">
+          <div className="footer-brand">
+            <div className="brand">
+              <span className="brand-mark">P</span>
+              <span>
+                <strong>PUCCINI</strong>
+                <small>PIZZERIA & STEAKHOUSE</small>
+              </span>
+            </div>
+            <p>
+              Traditional Italian pizza, pasta, seafood and grill dishes in
+              Newcastle upon Tyne.
+            </p>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#services">Services</a>
+          </div>
+          <div>
+            <h3>Visit</h3>
+            <a href="#location">29 Pudding Chare</a>
+            <a href="#location">Newcastle upon Tyne</a>
+            <a href="#location">NE1 1UF</a>
+            <a href={`tel:${PHONE}`}>{DISPLAY_PHONE}</a>
+          </div>
+          <div>
+            <h3>Menu</h3>
+            <a href="/Puccini-Food-Menu.pdf" target="_blank" rel="noreferrer">
+              View full menu
+            </a>
+            <a href="#services">Dine-in</a>
+            <a href="#services">Takeaway</a>
+            <a href="#services">Delivery</a>
+          </div>
+        </div>
+        <div className="container footer-bottom">
+          <span>
+            © {new Date().getFullYear()} Puccini Restaurant. All rights
+            reserved.
+          </span>
+          <span>Newcastle upon Tyne · NE1</span>
+        </div>
+      </footer>
 
-      {lightbox && <div className="lightbox" role="dialog" aria-modal="true" aria-label={lightbox.title} onClick={() => setLightbox(null)}><button className="lightbox-close" onClick={() => setLightbox(null)} aria-label="Close image"><Icon name="x" /></button><img src={lightbox.src} alt={lightbox.title} onClick={e => e.stopPropagation()} /><div className="lightbox-caption"><small>{lightbox.tag}</small>{lightbox.title}</div></div>}
+      {lightbox && (
+        <div
+          className="lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.title}
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="lightbox-close"
+            onClick={() => setLightbox(null)}
+            aria-label="Close image"
+          >
+            <Icon name="x" />
+          </button>
+          <img
+            src={lightbox.src}
+            alt={lightbox.title}
+            onClick={(e) => e.stopPropagation()}
+          />
+          <div className="lightbox-caption">
+            <small>{lightbox.tag}</small>
+            {lightbox.title}
+          </div>
+        </div>
+      )}
     </>
   );
 }
